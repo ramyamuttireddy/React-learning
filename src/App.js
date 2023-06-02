@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Button from './components/Buttons/Button';
+ 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,8 +16,11 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+          
+        </a> */}
+        <Button text="Read more"  bgColor="primary"  buttonType="solid"/>
       </header>
+   
     </div>
   );
 }
