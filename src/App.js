@@ -19,7 +19,17 @@ function App() {
           
         </a> */}
         <Button text="Read more"  bgColor="primary"  buttonType="solid"/>
+        <Button text="Read more"  bgColor="secondary"  buttonType="solid"/>
+        <Button text="Read more"  bgColor="white"  buttonType="solid"/>
+        <Button text="Read more"  bgColor="black"  buttonType="solid"/>
+
+        <Button text="Read more"  bgColor="primary"  buttonType="outline"/>
+        <Button text="Read more"  bgColor="secondary"  buttonType="outline"/>
+        <Button text="Read more"  bgColor="white"  buttonType="outline"/>
+        <Button text="Read more"  bgColor="black"  buttonType="outline"/>
+
       </header>
+
    
     </div>
   );
