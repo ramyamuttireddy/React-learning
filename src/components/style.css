@@ -1,0 +1,18 @@
+button{
+    padding: 10px 15px;
+    margin-bottom: 8px;
+}
+.main-dropdown {
+    position: relative;
+}
+
+
+.dorpdown-content{
+
+    display: none;
+    position: absolute;
+    left: 46%;
+}
+.show{
+    display: block;
+}
