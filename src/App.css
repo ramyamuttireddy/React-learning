@@ -1,13 +1,14 @@
 .calculator {
-  width: 250px;
+  max-width: 300px;
   margin: 0 auto;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: black;
 }
 
 .calculator input[type='text'] {
-  width: 100%;
+  width: 290px;
   margin-bottom: 10px;
   padding: 5px;
 }
@@ -23,21 +24,22 @@
   padding: 10px;
   font-size: 16px;
   text-align: center;
-  background-color: #f2f2f2;
+  background-color: white;
   border: none;
   cursor: pointer;
 }
 
 .calculator .clear,
 .calculator .equal {
-  background-color: #4caf50;
-  color: #fff;
+  background-color: white;
+  color: black;
 }
 
 .calculator .clear:hover,
 .calculator .equal:hover {
-  background-color: #45a049;
+  background-color: white;
 }
+
 .clear{
     margin-bottom: 10px;
     margin-top: 10px;

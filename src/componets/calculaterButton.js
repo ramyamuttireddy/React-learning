@@ -1,6 +1,7 @@
 import React from 'react'
 
 function CalculaterButton({ value, setResult, name }) {
+  
     function handleclick() {
       setResult(value + name);
     }
