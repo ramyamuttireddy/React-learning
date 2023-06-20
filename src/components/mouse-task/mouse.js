@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Mouse({value,latestStatus,mouseStatus}) {
+function Mouse({value,latestStatus}) {
   
     function handleMouseEnter(){
         latestStatus(true)
@@ -9,15 +9,11 @@ function Mouse({value,latestStatus,mouseStatus}) {
         latestStatus(false)
         
     }
-
    
 
-  return (
+return (
     <div>
-      <div className='mouse-box' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} 
-      >
-
-      </div>
+      <div className='mouse-box' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}></div>
     </div>
   )
 }

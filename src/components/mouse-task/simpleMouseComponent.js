@@ -3,20 +3,18 @@ import Mouse from './mouse';
 import Status from './status';
 
 function SimpleMouseComponent() {
-    const [isHover ,setIsHover] = useState(false);
-    
-    
+  const [isHover ,setIsHover] = useState(false);
 
-    function handleStatus(x){
-
-         setIsHover(x);
+    
+  function handleStatus(x){
+      setIsHover(x);
     }
     
 
   return (
     <div>
       <Status hover={isHover} />
-      <Mouse value={isHover}   latestStatus={handleStatus} />
+      <Mouse value={isHover}  latestStatus={handleStatus} />
       
     </div>
   )

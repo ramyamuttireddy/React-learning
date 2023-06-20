@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Status({hover , moving}) {
+function Status({hover}) {
   return (
     <div>
-      <div className='mouse-text'> {hover ? 'Mouse Enterd' : 'Mouse Left '}</div>
+      <div className='mouse-text'> {hover ? 'Mouse Enterd ' : 'Mouse Left'}</div>
       
     </div>
   )
