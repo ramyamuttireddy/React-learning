@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Mouse({value,latestStatus,mouseStatus}) {
+  
     function handleMouseEnter(){
         latestStatus(true)
     }
