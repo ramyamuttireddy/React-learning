@@ -1,44 +1,44 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'PT Sans', sans-serif;
+.calculator {
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.home,
-.services,
-.products,
-.sign-up {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+.calculator input[type='text'] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
-.services {
-  background-image: url('https://github.com/briancodex/react-website-v1/blob/master/public/images/img-2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.calculator .keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.calculator button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+
+.calculator .clear,
+.calculator .equal {
+  background-color: #4caf50;
   color: #fff;
-  font-size: 100px;
 }
 
-.products {
-  background-image: url('https://github.com/briancodex/react-website-v1/blob/master/public/images/img-1.jpg');
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.calculator .clear:hover,
+.calculator .equal:hover {
+  background-color: #45a049;
 }
-
-.sign-up {
-  background-image: url('https://github.com/briancodex/react-website-v1/blob/master/public/images/img-8.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.clear{
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
