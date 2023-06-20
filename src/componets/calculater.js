@@ -23,6 +23,7 @@ function Calculater() {
   return (
 
     <div className='calculator'>
+      
             <input type="text" value={result} />
         <div className='keyboard'>
 
