@@ -15,17 +15,21 @@ function Calculater() {
 
   const calculate = () => {
     try {
-      setResult(eval(result).toString());
+      let calculatedResult = eval(result).toString();
+      setResult(calculatedResult);
     } catch (error) {
       setResult('Error');
     }
   };
+  
   return (
 
     <div className='calculator'>
       
             <input type="text" value={result} />
+
         <div className='keyboard'>
+
 
       <CalculaterButton name='7' value={result} setResult={handleResult}/>
       <CalculaterButton name='8' value={result} setResult={handleResult}/>
@@ -42,9 +46,12 @@ function Calculater() {
       <CalculaterButton name='.' value={result} setResult={handleResult}/>
       <CalculaterButton name='0' value={result} setResult={handleResult}/>
       <CalculaterButton name='/' value={result} setResult={handleResult}/>
+
       </div>
+
       <button className="clear" onClick={clear}>Clear</button>
       <button className="equal" onClick={calculate}>=</button>
+
     </div>
   )
 }
