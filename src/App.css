@@ -1,44 +1,23 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'PT Sans', sans-serif;
+.App{
+  max-width:300px;
+  margin:0 auto;
+  
 }
-
-.home,
-.services,
-.products,
-.sign-up {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+div{
+  text-align: center;
+  margin-bottom: 10px;
 }
-
-.services {
-  background-image: url('https://github.com/briancodex/react-website-v1/blob/master/public/images/img-2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.second-component {
+  border:1px solid black;
+  margin-bottom: 10px;
+  padding-top: 10px;
 }
-
-.products {
-  background-image: url('https://github.com/briancodex/react-website-v1/blob/master/public/images/img-1.jpg');
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+button{
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
-
-.sign-up {
-  background-image: url('https://github.com/briancodex/react-website-v1/blob/master/public/images/img-8.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.third-component{
+  border:1px solid black;
+  margin-bottom: 10px;
+  padding-top: 10px;
 }
