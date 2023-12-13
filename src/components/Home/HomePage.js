@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Maincontent from '../content/Maincontent';
+import SubContent from '../content/SubContent';
+import UpComingMovies from '../ExtraMovies/upComingMovies';
+import Series from '../ExtraMovies/Series';
+import './HomePage.scss'
 
 function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -8,7 +13,7 @@ function HomePage() {
   }, []);
 
   async function fetchMovies() {
-    const url = 'https://moviesdatabase.p.rapidapi.com/titles';
+    const Url = `https://moviesdatabase.p.rapidapi.com/titles?list=top_boxoffice_200&page=5&limit=30`;
     const options = {
       method: 'GET',
       headers: {
@@ -18,35 +23,49 @@ function HomePage() {
     };
 
     try {
-      const response = await fetch(url, options);
-      if (response.ok) {
-        const result = await response.json();
-        console.log(result);
-        setMovies(result);
-      } else {
-        throw new Error('Failed to fetch movies');
-      }
+       const response = await fetch(Url, options);
+       if (response.ok) {
+          const result = await response.json();
+          setMovies(result.results)
+        } else {
+          throw new Error('Failed to fetch movies');
+        }
+     
+      
     } catch (error) {
       console.error(error);
     }
   }
-  console.log(movies)
-  return (
-  <div>
-    <h1>Home</h1>
-    <ul>
-    {movies.map((movie, index) => (
-          <li key={index}>
-          <img src={movie.primaryImage.url} alt={movie.titleText && movie.titleText.text} />
-          <p>{movie.titleText.text}</p>
-           <p>{movie.releaseYear.year}</p>
-          </li>
-        ))}
- </ul>
-  </div>
-);
 
-   
+  const fallbackImageURL = 'https://static-koimoi.akamaized.net/wp-content/new-galleries/2015/12/airlift-movie-poster-4.jpg'; 
+
+
+  return (
+    <div>
+      
+      <div>
+        <div className='home-page-movies'>
+         <Maincontent />
+        <div className='movie-section'>
+        {movies.map((movie, index) => (
+          <div key={index} >
+            <img
+              className="movie-image"
+              src={movie.primaryImage?.url || fallbackImageURL }
+              alt={movie.titleText?.text}
+            />
+            <p className='movie-title'>{movie.titleText?.text}</p>
+            <p className='movie-year'>{movie.releaseYear?.year}</p>
+          </div>
+        ))}
+        </div>
+        </div>
+          <SubContent />  
+          <UpComingMovies />
+          <Series />    
+      </div>
+    </div>
+  );
 }
 
 export default HomePage;
