@@ -1,11 +1,12 @@
+
 import React from 'react'
 
 function FirstComponents(props) {
-    return (
+  return (
     <div>
-       <div className='value'>The value is {props.value}</div>
+      <div className='value'>The Value is {props.value}</div>
     </div>
   )
 }
 
-export default FirstComponents;
+export default  FirstComponents;

@@ -5,23 +5,17 @@ import { useState } from 'react';
 
 
 function App() {
-  const [data, setData] =useState(0);
- 
+ const [data,setData] = useState(0);
 
-  function handleIncrement(x){
-   setData(x);
-  }
-  
-  return(
+ function handleOnclick(x){
+    setData(x);
+ }
+  return (
     <div className='App'>
-      <div>
-
-         <FirstComponents value={data} />
-         <SecondComponents  value={data} setValue={handleIncrement} />
-
-      </div>
-      </div>
+      <FirstComponents value={data}/>
+      <SecondComponents value={data} Setvalue={handleOnclick}/>
+    </div>
   )
 }
+export default  App;
 
-export default App;

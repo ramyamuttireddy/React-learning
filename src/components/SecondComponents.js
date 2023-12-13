@@ -1,22 +1,24 @@
-import React from "react"
+import React from 'react'
 
-function SecondComponents ({ value, setValue }) {
-  function  handleDecrement(){
-    if(setValue){
-   setValue(value - 1)
+function SecondComponents({value,Setvalue}) {
+
+  function handleIncrement(){
+    if(Setvalue){
+
+       Setvalue(value + 1);
     }
   }
-  function  handleIncrement(){
-     if(setValue){
-    setValue(value + 1)
-     }
-   }
+  function handleDecrement(){
+    if(Setvalue){
+       Setvalue(value - 1);
+    }
+  }
   return (
-    <div className="button-container">
-      <button onClick={handleDecrement}>Decrement</button>
+    <div className='button-container'>
       <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
     </div>
-  );
-};
+  )
+}
 
 export default SecondComponents;
