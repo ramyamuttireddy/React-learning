@@ -2,22 +2,28 @@ import React, { useState } from 'react'
 import Mouse from './mouse';
 import Status from './status';
 
-function SimpleMouseComponent() {
-  const [isHover ,setIsHover] = useState(false);
 
-    
-  function handleStatus(x){
-      setIsHover(x);
-    }
-    
+
+
+
+export default function SimpleMouseComponent() {
+  
+  const [isOver,setIsOver]= useState(false);
+
+  function HandleStatus(x){
+    setIsOver(x);
+  }
 
   return (
     <div>
-      <Status hover={isHover} />
-      <Mouse value={isHover}  latestStatus={handleStatus} />
-      
+       <Mouse value={isOver} latestStatus ={HandleStatus}/>
+       <Status hover={isOver} />
     </div>
   )
 }
 
-export default SimpleMouseComponent
+
+
+
+
+

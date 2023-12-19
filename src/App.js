@@ -1,7 +1,5 @@
-
-import './App.css';
 import SimpleMouseComponent from './components/mouse-task/simpleMouseComponent';
-
+import './App.css';
 
 function App() {
   return (
